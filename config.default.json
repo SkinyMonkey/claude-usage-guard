@@ -1,5 +1,5 @@
 {
-  "max_cost_per_window_usd": 8.00,
+  "max_cost_per_window_usd": 40.00,
   "warning_threshold_pct": 80,
   "block_threshold_pct": 95,
   "window_hours": 5,

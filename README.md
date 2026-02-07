@@ -25,17 +25,19 @@ claude plugin add ./claude-usage-guard
 
 ## Configuration
 
-Default budget is $8.00 per 5-hour window (at API pricing rates). Adjust based on when you actually get rate-limited on your plan:
+Default budget is **$40.00** per 5-hour window (at API pricing rates). This was calibrated against a Max plan session where $16.92 at API pricing corresponded to 40% usage in the Claude UI.
+
+Adjust based on when you actually get rate-limited on your plan:
 
 ```
-/usage-configure 12.00
+/usage-configure 50.00
 ```
 
 Or edit `~/.claude/usage-guard-config.json` directly:
 
 ```json
 {
-  "max_cost_per_window_usd": 12.00,
+  "max_cost_per_window_usd": 50.00,
   "warning_threshold_pct": 80,
   "block_threshold_pct": 95
 }
@@ -56,9 +58,13 @@ Or edit `~/.claude/usage-guard-config.json` directly:
 
 ## Calibration
 
-The plugin estimates cost using published Anthropic API pricing. Since Max/Pro plans have different internal accounting, the dollar amounts won't match your actual plan limits. Use them as a relative measure:
+The plugin estimates cost using published Anthropic API pricing. Since Max/Pro plans have different internal accounting, the dollar amounts won't match your actual plan limits exactly. Use them as a relative measure.
 
-1. Start with the default ($8.00)
+**Known data point (Max 5x plan):** $16.92 at API pricing ≈ 40% usage in Claude UI → ~$42 = 100%.
+
+The default of $40 is conservative. Adjust based on your experience:
+
+1. Start with the default ($40.00)
 2. If you get rate-limited before the guard triggers, lower the threshold
 3. If the guard triggers but you've never been rate-limited, raise it
 
