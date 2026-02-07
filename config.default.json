@@ -1,0 +1,34 @@
+{
+  "max_cost_per_window_usd": 8.00,
+  "warning_threshold_pct": 80,
+  "block_threshold_pct": 95,
+  "window_hours": 5,
+  "pricing": {
+    "claude-opus-4-6": {
+      "input_per_mtok": 15.0,
+      "cache_creation_per_mtok": 18.75,
+      "cache_read_per_mtok": 1.50,
+      "output_per_mtok": 75.0
+    },
+    "claude-sonnet-4-5-20250929": {
+      "input_per_mtok": 3.0,
+      "cache_creation_per_mtok": 3.75,
+      "cache_read_per_mtok": 0.30,
+      "output_per_mtok": 15.0
+    },
+    "claude-haiku-4-5-20251001": {
+      "input_per_mtok": 0.80,
+      "cache_creation_per_mtok": 1.00,
+      "cache_read_per_mtok": 0.08,
+      "output_per_mtok": 4.0
+    },
+    "default": {
+      "input_per_mtok": 15.0,
+      "cache_creation_per_mtok": 18.75,
+      "cache_read_per_mtok": 1.50,
+      "output_per_mtok": 75.0
+    }
+  },
+  "cache_file": "~/.claude/usage-guard-cache.json",
+  "config_file": "~/.claude/usage-guard-config.json"
+}

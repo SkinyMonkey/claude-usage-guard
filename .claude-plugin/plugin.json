@@ -1,0 +1,8 @@
+{
+  "name": "usage-guard",
+  "description": "Monitors token usage per 5-hour billing window and pauses sessions when approaching the limit. Works standalone and integrates with Ralph Loop.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Adrien Candiotti"
+  }
+}
